@@ -1,6 +1,15 @@
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+from rest_framework import viewsets
+from .models import Quiz, Question, Response
+from .serializers import QuizSerializer, QuestionSerializer, ResponseSerializer
 
-@api_view(['GET'])
-def sample_api(request):
-    return Response({"message": "yo karan, api working ✅"})
+class QuizViewSet(viewsets.ModelViewSet):
+    queryset = Quiz.objects.all()
+    serializer_class = QuizSerializer
+
+class QuestionViewSet(viewsets.ModelViewSet):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer
+
+class ResponseViewSet(viewsets.ModelViewSet):
+    queryset = Response.objects.all()
+    serializer_class = ResponseSerializer
