@@ -2,41 +2,127 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.attendity {
+  font-size: 70px;
+  font-weight: 600;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+form input {
+  margin: 5px; 
+  background-color:#9c9797;
+  color: black;
+  cursor: pointer;
 }
 
-.card {
-  padding: 2em;
+.nav {
+  display: flex;
+  gap: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.nav img {
+  align-self: center;
+  border-radius: 10%;
+}
+
+.nav h4 {
+  justify-self: flex-start;
+}
+
+.classes {
+  display: flex;
+  flex-direction: column;
+}
+
+.class {
+  border: 3px solid black;
+  padding-left: 130px;
+  padding-right: 130px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.class h3 {
+  color: black;
+  font-size: 25px;
+}
+
+.class1 p {
+  color: green;
+  font-size: 20px;
+}
+
+.class3 p {
+  color: red;
+  font-size: 20px;
+}
+
+.class2 p {
+  color: white;
+  font-size: 20px;
+  background-color: rgb(14, 14, 161);
+  border-radius: 8px;
+  padding-left: 30px;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.scanner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+#reader {
+  width: 320px;
+  border: 3px solid #007bff;
+  border-radius: 16px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+#reader button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#reader button:hover {
+  background-color: #0056b3;
+}
+
+#html5-qrcode-anchor-scan-type-change {
+  display: none;
+}
+
+.quiz-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  background: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.question-block {
+  margin-bottom: 20px;
+}
+
+.option {
+  display: block;
+  margin-left: 20px;
+  margin-top: 5px;
+  cursor: pointer;
 }
