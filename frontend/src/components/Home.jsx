@@ -38,7 +38,7 @@ const Home = () => {
             ? "Present"
             : id === 2
               ? "Incomplete Quiz"
-              : "Absent"
+              : "Give Attendence"
           }</p>
         </div>
 
