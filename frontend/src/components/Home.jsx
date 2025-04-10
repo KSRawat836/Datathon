@@ -7,14 +7,16 @@ import { useNavigate } from 'react-router-dom';
 const Home = () => {
   const location = useLocation();
   const data = location.state;
+  const { id } = location.state || {};
   console.log(data)
 
   const navigate = useNavigate();
 
-  const handleFqr = async(e) => {
+  const handleFqr = async (e) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    navigate('/Fqr',  { state: data });
+    if (id != 1 & 2) {
+      navigate('/Fqr', { state: data });
+    }
   }
 
   return (
@@ -32,7 +34,12 @@ const Home = () => {
         </div>
         <div className="class class2">
           <h3>Eng. Phy</h3>
-          <p onClick={(e) => handleFqr(e)}>Complete Attendence</p>
+          <p onClick={(e) => handleFqr(e)}>{id === 1
+            ? "Present"
+            : id === 2
+              ? "Incomplete Quiz"
+              : "Absent"
+          }</p>
         </div>
 
       </div>
@@ -41,3 +48,4 @@ const Home = () => {
 }
 
 export default Home
+
